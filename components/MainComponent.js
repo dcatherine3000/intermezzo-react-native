@@ -5,6 +5,7 @@ import Events from './EventsComponent';
 import Faq from './FaqComponent';
 import Contact from './ContactComponent';
 import { View, Platform } from 'react-native';
+import { Icon } from 'react-native-elements';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
@@ -14,15 +15,21 @@ const HomeNavigator = createStackNavigator(
         Home: { screen: Home }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
                 backgroundColor: 'black'
             },
             headerTintColor: 'white',
             headerTitleStyle: {
                 color: 'white'
-            }
-        }
+            },
+            headerLeft: <Icon
+                            name='list'
+                            type='font-awesome'
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+        })
     }
 );
 
@@ -31,15 +38,21 @@ const AboutNavigator = createStackNavigator(
         About: { screen: About }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
                 backgroundColor: 'black'
             },
             headerTintColor: 'white',
             headerTitleStyle: {
                 color: 'white'
-            }
-        }
+            },
+            headerLeft: <Icon
+                            name='list'
+                            type='font-awesome'
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+        })
     }
 );
 
@@ -48,15 +61,21 @@ const EventsNavigator = createStackNavigator(
         Events: { screen: Events }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
                 backgroundColor: 'black'
             },
             headerTintColor: 'white',
             headerTitleStyle: {
                 color: 'white'
-            }
-        }
+            },
+            headerLeft: <Icon
+                            name='list'
+                            type='font-awesome'
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+        })
     }
 );
 
@@ -65,15 +84,21 @@ const FaqNavigator = createStackNavigator(
         Faq: { screen: Faq }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
                 backgroundColor: 'black'
             },
             headerTintColor: 'white',
             headerTitleStyle: {
                 color: 'white'
-            }
-        }
+            },
+            headerLeft: <Icon
+                            name='list'
+                            type='font-awesome'
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+        })
     }
 );
 
@@ -82,15 +107,21 @@ const ContactNavigator = createStackNavigator(
         Contact: { screen: Contact }
     },
     {
-        defaultNavigationOptions: {
+        defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
                 backgroundColor: 'black'
             },
             headerTintColor: 'white',
             headerTitleStyle: {
                 color: 'white'
-            }
-        }
+            },
+            headerLeft: <Icon
+                            name='list'
+                            type='font-awesome'
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+        })
     }
 );
 
