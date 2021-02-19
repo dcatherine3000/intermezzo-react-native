@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, ScrollView } from 'react-native';
-import { Tile, Divider, Card, Image } from 'react-native-elements';
+import { View, Text, FlatList, ScrollView, StyleSheet } from 'react-native';
+import { Tile, Card, Button } from 'react-native-elements';
 import { MODEL } from '../shared/model';
 
 class Home extends Component {
@@ -36,16 +36,34 @@ class Home extends Component {
                     featured
                     imageSrc={require('./images/stage.jpg')}
                 />
-                <Divider style={{ backgroundColor: 'black', height: 5 }}/>
-                <Text>Our Model</Text>
+                <Text style={styles.pageHeader}>Our Model</Text>
                 <FlatList 
                     data={this.state.model}
                     keyExtractor={item => item.id.toString()}
                     renderItem={renderModel}
                 />
+                <Button 
+                    title='Contact Us'
+                    type='solid'
+                    buttonStyle={styles.button}
+                />
             </ScrollView>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    pageHeader: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 20,
+        marginBottom: 10
+    },
+    button: {
+        margin: 40,
+        fontSize: 20
+    }
+})
 
 export default Home;
