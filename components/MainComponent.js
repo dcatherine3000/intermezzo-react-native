@@ -4,7 +4,7 @@ import About from './AboutComponent';
 import Events from './EventsComponent';
 import Faq from './FaqComponent';
 import Contact from './ContactComponent';
-import { View, Platform } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
@@ -17,7 +17,7 @@ const HomeNavigator = createStackNavigator(
     {
         defaultNavigationOptions: ({navigation}) => ({
             headerStyle: {
-                backgroundColor: 'black'
+                backgroundColor: 'black',
             },
             headerTintColor: 'white',
             headerTitleStyle: {
@@ -153,5 +153,9 @@ class Main extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    
+})
 
 export default Main;
